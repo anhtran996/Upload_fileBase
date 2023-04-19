@@ -8,6 +8,7 @@
 <input type="file" id="fileButton" onchange="uploadImage(event)">
 <h1>Hello GFG</h1>
 <div id="imgDiv"></div>
+    <input type="text" class="form-control border-0 py-4" name="image" id="image">
 <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
 <script>
     // Initialize Firebase
@@ -52,7 +53,7 @@
             }, function () {
                 let downloadURL = uploadTask.snapshot.downloadURL;
                 document.getElementById('imgDiv').innerHTML = `<img src="${downloadURL}" alt="">`
-                localStorage.setItem('image', downloadURL);
+                document.getElementById('image') = downloadURL)
             });
     }
 </script>
