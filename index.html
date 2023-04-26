@@ -53,7 +53,7 @@
             }, function () {
                 let downloadURL = uploadTask.snapshot.downloadURL;
                 document.getElementById('imgDiv').innerHTML = `<img src="${downloadURL}" alt="">`
-                document.getElementById('image') = downloadURL)
+                document.getElementById('image').value = downloadURL
             });
     }
 </script>
